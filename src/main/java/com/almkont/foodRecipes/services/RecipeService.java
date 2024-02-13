@@ -1,5 +1,7 @@
-package com.almkont.foodRecipes;
+package com.almkont.foodRecipes.services;
 
+import com.almkont.foodRecipes.models.Recipe;
+import com.almkont.foodRecipes.models.RecipeDTO;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -55,7 +57,7 @@ public class RecipeService {
                     .map(ingredient -> ingredient.getAmount() + " " + ingredient.getUnit() + " " + ingredient.getName())
                     .collect(Collectors.toList());
             recipe.setMissedIngredients(missedIngredients);
-            recipe.setImgURL(dto.getImgURL());
+            recipe.setImage(dto.getImage());
 
             return recipe;
         }).toArray(Recipe[]::new);

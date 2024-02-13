@@ -1,5 +1,7 @@
-package com.almkont.foodRecipes;
+package com.almkont.foodRecipes.controllers;
 
+import com.almkont.foodRecipes.models.Recipe;
+import com.almkont.foodRecipes.services.RecipeService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

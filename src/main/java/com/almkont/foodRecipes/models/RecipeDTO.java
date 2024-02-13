@@ -1,4 +1,4 @@
-package com.almkont.foodRecipes;
+package com.almkont.foodRecipes.models;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ public class RecipeDTO {
     private String title;
     private List<IngredientDTO> usedIngredients;
     private List<IngredientDTO> missedIngredients;
-    private String imgURL;
+    private String image;
 
     public String getTitle() {
         return title;
@@ -32,11 +32,11 @@ public class RecipeDTO {
         this.missedIngredients = missedIngredients;
     }
 
-    public String getImgURL() {
-        return imgURL;
+    public String getImage() {
+        return image;
     }
 
-    public void setImgURL(String imgURL) {
-        this.imgURL = imgURL;
+    public void setImage(String image) {
+        this.image = image;
     }
 }

@@ -1,4 +1,4 @@
-package com.almkont.foodRecipes;
+package com.almkont.foodRecipes.models;
 
 public class IngredientDTO {
     private String name;

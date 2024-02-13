@@ -12,6 +12,10 @@
 <div th:each="recipe, iterStat : ${recipes}">
     <h2 th:text="${recipe.title}">Recipe Title</h2>
 
+    <div th:if="${recipe.image}">
+        <img th:src="${recipe.image}" alt="Recipe Image" style="width: 200px; height: auto;"/>
+    </div>
+
     <h3>Used Ingredients</h3>
     <ul>
         <li th:each="usedIngredient : ${recipe.usedIngredients}" th:text="${usedIngredient}">Used ingredient</li>
