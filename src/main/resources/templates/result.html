@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Search Results</title>
+</head>
+<body>
+<h1>Recipes Found</h1>
+<div th:if="${recipes == null or recipes.length == 0}">
+    <p>No recipes found.</p>
+</div>
+<div th:each="recipe, iterStat : ${recipes}">
+    <h2 th:text="${recipe.title}">Recipe Title</h2>
+
+    <h3>Used Ingredients</h3>
+    <ul>
+        <li th:each="usedIngredient : ${recipe.usedIngredients}" th:text="${usedIngredient}">Used ingredient</li>
+    </ul>
+
+    <h3>Missed Ingredients</h3>
+    <ul>
+        <li th:each="missedIngredient : ${recipe.missedIngredients}" th:text="${missedIngredient}">Missed ingredient</li>
+    </ul>
+</div>
+<a href="/">Search again</a>
+</body>
+</html>

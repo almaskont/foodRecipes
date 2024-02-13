@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Recipe Finder</title>
+</head>
+<body>
+<h2>Find Recipes by Ingredients</h2>
+<form action="/search" method="post">
+    <label for="ingredients">Enter Ingredients:</label><br>
+    <input type="text" id="ingredients" name="ingredients" placeholder="tomato, cheese, ..." required>
+    <br><br>
+    <button type="submit">Search Recipes</button>
+</form>
+</body>
+</html>
